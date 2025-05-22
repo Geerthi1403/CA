@@ -37,6 +37,24 @@ namespace V1._0
             listBoxTasks.Items.Add(taskName + " - Due: " + dueDate.ToShortDateString());
             txtTask.Clear();
             txtDueDate.Clear();
+        
+        }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            txtTask.Clear();
+            txtDueDate.Clear();
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            if (listBoxTasks.SelectedIndex != -1)
+            {
+                listBoxTasks.Items.RemoveAt(listBoxTasks.SelectedIndex);
+            }
+            else
+            {
+            }
         }
         
 
